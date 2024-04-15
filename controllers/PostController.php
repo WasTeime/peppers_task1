@@ -15,4 +15,10 @@ class PostController extends Controller
         $posts = $query->offset($pages->offset)->limit($pages->limit)->all();
         return $this->render('index', compact('posts', 'pages'));
     }
+
+    public function actionView($id)
+    {
+        $post = Post::find()->where(['id' => $id])->all()[0];
+        return $this->render('view', compact('post'));
+    }
 }
