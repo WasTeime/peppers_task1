@@ -66,12 +66,15 @@ $this->title = Yii::$app->name;
 -->
 
         <div class="nav-links">
-            <span class="page-numbers current">1</span>
+            <?= \yii\widgets\LinkPager::widget([
+                    'pagination' => $pages,
+            ]) ?>
+            <!--<span class="page-numbers current">1</span>
             <a class="page-numbers" href="#">2</a>
             <a class="page-numbers" href="#">3</a>
             <a class="page-numbers" href="#">4</a>
             <a class="page-numbers" href="#">5</a>
-            <a class="page-numbers" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a class="page-numbers" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>-->
         </div>
     </div>
 </section>
