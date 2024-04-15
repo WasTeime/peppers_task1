@@ -10,6 +10,7 @@ $config = [
     'name' => 'Classic',
     'layout' => 'blog',
     'language' => 'ru',
+    'defaultRoute' => 'post/index',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
