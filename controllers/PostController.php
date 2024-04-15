@@ -19,6 +19,11 @@ class PostController extends Controller
     public function actionView($id)
     {
         $post = Post::find()->where(['id' => $id])->all()[0];
+
+        $mopel = new Post();
+        $mopel->load(\Yii::$app->request->post());
+        $model->created_at = time();
+        $mopel->save();
         return $this->render('view', compact('post'));
     }
 }

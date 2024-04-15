@@ -25,7 +25,7 @@ $config = [
             'baseUrl' => '',
         ],
         'cache' => [
-            'class' => 'yii\caching\FileCache',
+            'class' => yii\caching\FileCache::class,
         ],
         'user' => [
             'identityClass' => 'app\models\User',
